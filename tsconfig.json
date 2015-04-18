@@ -1,0 +1,27 @@
+{
+    "version": "1.4.1",
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "declaration": false,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "noLib": false
+    },
+    "filesGlob": [
+        "./**/*.ts",
+        "!./node_modules/**/*.ts"
+    ],
+    "files": [
+        "./libs/core/core.d.ts",
+        "./libs/core/egret/context/html5.d.ts",
+        "./libs/core/egret/context/native.d.ts",
+        "./libs/core/extension/gui/gui.d.ts",
+        "./libs/core/extension/resource/res.d.ts",
+        "./libs/exml.d.ts",
+        "./src/AssetAdapter.ts",
+        "./src/LoadingUI.ts",
+        "./src/Main.ts",
+        "./src/scene/Showcase.ts"
+    ]
+}

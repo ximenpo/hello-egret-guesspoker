@@ -1,0 +1,13 @@
+{"file":"shuffle-cards.png","frames":{
+"0":{"x":1,"y":1,"w":238,"h":115,"offX":2,"offY":0,"sourceW":240,"sourceH":130},
+"1":{"x":241,"y":1,"w":238,"h":115,"offX":2,"offY":0,"sourceW":240,"sourceH":130},
+"2":{"x":234,"y":349,"w":238,"h":112,"offX":2,"offY":0,"sourceW":240,"sourceH":130},
+"3":{"x":234,"y":235,"w":238,"h":112,"offX":2,"offY":0,"sourceW":240,"sourceH":130},
+"4":{"x":1,"y":118,"w":238,"h":115,"offX":2,"offY":0,"sourceW":240,"sourceH":130},
+"5":{"x":241,"y":118,"w":234,"h":115,"offX":4,"offY":2,"sourceW":240,"sourceH":130},
+"6":{"x":1,"y":235,"w":231,"h":116,"offX":7,"offY":2,"sourceW":240,"sourceH":130},
+"7":{"x":1,"y":353,"w":216,"h":114,"offX":7,"offY":4,"sourceW":240,"sourceH":130},
+"8":{"x":219,"y":463,"w":199,"h":115,"offX":19,"offY":6,"sourceW":240,"sourceH":130},
+"9":{"x":1,"y":580,"w":225,"h":90,"offX":9,"offY":28,"sourceW":240,"sourceH":130},
+"10":{"x":1,"y":469,"w":209,"h":75,"offX":14,"offY":31,"sourceW":240,"sourceH":130},
+"11":{"x":228,"y":580,"w":115,"h":81,"offX":61,"offY":25,"sourceW":240,"sourceH":130}}}

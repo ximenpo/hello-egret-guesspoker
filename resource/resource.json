@@ -1,8 +1,14 @@
 {
 	"groups":[
 	{
-		"keys":"",
+		"keys":"shuffle-cards",
 		"name":"preload"
 	}],
-	"resources":[]
+	"resources":[
+	{
+		"name":"shuffle-cards",
+		"subkeys":"",
+		"type":"sheet",
+		"url":"assets/shuffle-cards.json"
+	}]
 }

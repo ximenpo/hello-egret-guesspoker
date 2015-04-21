@@ -1,6 +1,6 @@
 module simple{
 
-export  class Game extends egret.EventDispatcher {
+export  class GameStage extends egret.EventDispatcher {
     //游戏场景层，游戏场景相关内容可以放在这里面。
     private _gameLayer: egret.DisplayObjectContainer;
     //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。

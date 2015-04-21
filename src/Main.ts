@@ -99,13 +99,13 @@ class Main extends egret.DisplayObjectContainer {
         }
     }
 
-    private _game : Game;
+    private _gameStage : GameStage;
     /**
      * 创建场景界面
      * Create scene interface
      */
     private createScene(): void {
-      this._game = new Game(this);
+      this._gameStage = new GameStage(this);
     }
-    
+
 }

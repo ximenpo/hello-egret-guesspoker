@@ -19,10 +19,11 @@
         "./libs/core/extension/gui/gui.d.ts",
         "./libs/core/extension/resource/res.d.ts",
         "./src/AssetAdapter.ts",
-        "./src/Game.ts",
+        "./src/GameStage.ts",
         "./src/LoadingUI.ts",
         "./src/Main.ts",
         "./src/scene/Showcase.ts",
-        "./src/simple/Game.ts"
+        "./src/simple/BitmapFrame.ts",
+        "./src/simple/GameStage.ts"
     ]
 }

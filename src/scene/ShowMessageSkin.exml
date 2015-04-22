@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="400" height="300" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:UIAsset id="uiasset1" source="bubble" x="97" width="262" height="179" includeIn="normal" y="103"/>
+	<e:Label id="ctrlMessage" width="214" height="114" textAlign="center" verticalAlign="middle" includeIn="normal" horizontalCenter="25" verticalCenter="24"/>
+	<e:transitions>
+		<e:Array>
+			<e:Transition toState="normal" fromState="disabled">
+				<e:Parallel>
+					<e:Fade target="{uiasset1}" alphaFrom="0" alphaTo="200">
+						<e:easer>
+							<e:Sine/>
+						</e:easer>
+					</e:Fade>
+					<e:Scale target="{ctrlMessage}" startDelay="500" autoCenterTransform="true"/>
+				</e:Parallel>
+			</e:Transition>
+		</e:Array>
+	</e:transitions>
+</e:Skin>

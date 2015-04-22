@@ -2,6 +2,7 @@ module simple {
 
     export class GameStage extends egret.EventDispatcher {
         private _stage: egret.Stage;
+        private _bgLayer: egret.DisplayObjectContainer;
         //游戏场景层，游戏场景相关内容可以放在这里面。
         private _gameLayer: egret.DisplayObjectContainer;
         //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。
@@ -11,6 +12,10 @@ module simple {
 
         public get stage() {
             return this._stage;
+        }
+
+        public get bgLayer() {
+            return this._bgLayer;
         }
 
         public get gameLayer() {
@@ -34,6 +39,9 @@ module simple {
             super();
 
             this._stage = egret.MainContext.instance.stage;
+
+            this._bgLayer = new egret.DisplayObjectContainer();
+            this._root.addChild(this._bgLayer);
 
             this._gameLayer = new egret.DisplayObjectContainer();
             this._root.addChild(this._gameLayer);

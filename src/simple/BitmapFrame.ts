@@ -72,8 +72,8 @@ module simple {
                 return;
             }
             this._isPlaying = true;
-            this._beginTimer = egret.getTimer() / 1000/0;
-            this._endTimer = this._beginTimer + playTimes * this.totalFrames / this.frameRate;
+            this._beginTimer = egret.getTimer() / 1000.0;
+            this._endTimer = this._beginTimer + (playTimes * this.totalFrames - 0.1) / this.frameRate;
             this.addEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
         }
 

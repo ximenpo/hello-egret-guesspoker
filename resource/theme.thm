@@ -1,6 +1,7 @@
 {
 	"skins":
 	{
+		"RestartScene":"skins.scene.RestartGameSkin",
 		"ShowMessageScene":"skins.scene.ShowMessageSkin",
 		"egret.gui.Button":"skins.simple.ButtonSkin",
 		"egret.gui.HScrollBar":"skins.simple.HScrollBarSkin",

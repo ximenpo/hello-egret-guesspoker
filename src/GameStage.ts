@@ -6,8 +6,14 @@
     private _npcFramesData: simple.BitmapFramesData;
 
     private _cardsData: Array<any> = [];
+
+    private _cardNumber: number;
+    private _remainTimes: number;
+
     public constructor(root: egret.DisplayObjectContainer) {
         super(root);
+        this._cardNumber = 0;
+        this._remainTimes = 0;
         this.initResources();
     }
 
@@ -88,9 +94,10 @@
         egret.Tween.removeTweens(img);
         var tw = egret.Tween.get(img);
         tw.to({ y: this.stage.stageHeight / 2, scaleX: 1.2, scaleY: 1.2 }, 800, egret.Ease.bounceOut);
-        tw.call(this._doShowMessage, this, ["给你三次机会，如果能猜中数字的话 ..."]);
+        tw.call(this._doShowMessage, this, ["有三次机会，如果能猜中数字的话 ..."]);
         tw.wait(3000);
-        tw.call(this._doShowMessage, this, ["现在，请猜猜这张牌的数字 ..."]);
+        tw.call(this._doShowMessage, this, ["游戏开始，请猜猜这张牌的数字 ..."]);
+        tw.wait(500);
         tw.call(this._doInitCards, this);
     }
 
@@ -121,10 +128,61 @@
     }
 
     private _doInitCards() {
+        this._cardNumber    = Math.floor(Math.random() * 10000) % 14;
+        this._remainTimes   = 3;
         this._guiMessage.ctrlList.dataProvider = new egret.gui.ArrayCollection(this._cardsData);
     }
 
     private _doOnCardSelected(evt: egret.Event) {
-        alert(Number(this._guiMessage.ctrlList.selectedIndex) + 1);
+        var ret = Number(this._guiMessage.ctrlList.selectedIndex) + 1 - this._cardNumber;
+        if(Math.abs(ret) < 0.1){
+            this._doGameEnd(true);
+            return;
+        }
+
+        this._remainTimes--;
+        if(this._remainTimes < 1){
+            this._doGameEnd(false);
+            return;
+        }
+
+        var tip = (ret < 0) ? "还有机会，猜大点儿呗 ..." : "小一点试试哇 ～～";
+        egret.callLater(this._doShowMessage, this, [tip]);
+    }
+
+    private _restartScene: RestartScene;
+    private _doGameEnd(is_succeed: boolean){
+        egret.callLater(this._doShowMessage, this, [is_succeed?"恭喜你，答对啦～～":"没猜出来涅？再来一把呗～"]);
+
+        egret.callLater(this._doShowRestart, this);
+    }
+
+    private _doShowRestart(){
+        if(null == this._restartScene){
+            var scene = new RestartScene();
+            scene.enabled   = false;
+            scene.visible   = false;
+            scene.addEventListener(RestartScene.EVENT_TOUCHED, this._doRestartGame, this);
+            this.guiLayer.addElement(scene);
+            this._restartScene  = scene;
+            egret.callLater(this._doShowRestart, this);
+            return;
+        }
+
+        this._restartScene.enabled  = true;
+        this._restartScene.visible  = true;
+    }
+
+    private _doRestartGame(evt: egret.TouchEvent){
+        this.guiLayer.removeElement(this._restartScene);
+        this._restartScene  = null;
+
+        this.gameLayer.removeChild(this._imgDealCard);
+        this._imgDealCard   = null;
+
+        this._guiMessage.enabled = false;
+        this._guiMessage.visible = false;
+        this._guiMessage.ctrlList.dataProvider = null;
+        egret.callLater(this._doShuffleCards, this);
     }
 }

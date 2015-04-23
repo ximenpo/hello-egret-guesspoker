@@ -22,7 +22,7 @@ class ShowMessageScene extends egret.gui.SkinnableComponent {
     }
 
     private onListSelectionChange(event: egret.gui.IndexChangeEvent): void {
-        console.log("You have selected " + this.ctrlList.selectedItem.label);
+        //console.log("You have selected " + this.ctrlList.selectedItem.label);
         this.dispatchEvent(new egret.Event(ShowMessageScene.EVENT_CARD_SELECTED));
     }
 }

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin width="480" height="800" xmlns:e="http://ns.egret-labs.org/egret" xmlns:w="http://ns.egret-labs.org/wing">
+	<w:HostComponent name="egret.gui.SkinnableComponent"/>
+	<w:Declarations/>
+	<e:states>
+		<e:State name="normal"/>
+		<e:State name="disabled"/>
+	</e:states>
+	<e:UIAsset id="ctrlLogo" height="200" width="164" x="0" y="219" source="0" visible.disabled="false"/>
+	<e:UIAsset id="uiasset1" source="bubble" x="97" width="344" height="196" y="103" visible.disabled="false"/>
+	<e:Label id="ctrlMessage" width="326" height="123" textAlign="center" verticalAlign="middle" x="103" y="121" visible.disabled="false" text="我想说..."/>
+	<e:List id="ctrlList" x="0" y="560" width="100%" height="120">
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:List>
+	<e:transitions>
+		<e:Array>
+			<e:Transition fromState="disabled" toState="normal">
+				<e:Parallel>
+					<e:Move target="{ctrlLogo}" xFrom="-200" xTo="0" duration="500"/>
+					<e:Parallel target="{uiasset1}">
+						<e:Fade alphaFrom="0" alphaTo="0" duration="10"/>
+						<e:Fade alphaFrom="0" duration="500" startDelay="500" alphaTo="200"/>
+					</e:Parallel>
+					<e:Parallel target="{ctrlMessage}">
+						<e:Fade alphaFrom="0" alphaTo="0" duration="10"/>
+						<e:Fade alphaFrom="0" startDelay="800" alphaTo="235"/>
+					</e:Parallel>
+				</e:Parallel>
+			</e:Transition>
+		</e:Array>
+	</e:transitions>
+</e:Skin>

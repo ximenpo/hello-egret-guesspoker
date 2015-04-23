@@ -132,6 +132,56 @@
 				"isFolder":false,
 				"key":"bubble",
 				"name":"bubble"
+			},
+			{
+				"isFolder":false,
+				"key":"button_disabled_png",
+				"name":"button_disabled_png"
+			},
+			{
+				"isFolder":false,
+				"key":"button_down_png",
+				"name":"button_down_png"
+			},
+			{
+				"isFolder":false,
+				"key":"button_normal_png",
+				"name":"button_normal_png"
+			},
+			{
+				"isFolder":false,
+				"key":"hscrollbtn_png",
+				"name":"hscrollbtn_png"
+			},
+			{
+				"isFolder":false,
+				"key":"hscrolltrack_png",
+				"name":"hscrolltrack_png"
+			},
+			{
+				"isFolder":false,
+				"key":"app_list_item_cutlline_png",
+				"name":"app_list_item_cutlline_png"
+			},
+			{
+				"isFolder":false,
+				"key":"app_list_item_select_png",
+				"name":"app_list_item_select_png"
+			},
+			{
+				"isFolder":false,
+				"key":"app_list_item_up_png",
+				"name":"app_list_item_up_png"
+			},
+			{
+				"isFolder":false,
+				"key":"vscrollbtn_png",
+				"name":"vscrollbtn_png"
+			},
+			{
+				"isFolder":false,
+				"key":"vscrolltrack_png",
+				"name":"vscrolltrack_png"
 			}]
 		}
 	},

@@ -1,6 +1,14 @@
 {
 	"skins":
 	{
-		"ShowMessageScene":"scene.ShowMessageSkin"
+		"ShowMessageScene":"skins.scene.ShowMessageSkin",
+		"egret.gui.Button":"skins.simple.ButtonSkin",
+		"egret.gui.HScrollBar":"skins.simple.HScrollBarSkin",
+		"egret.gui.ItemRenderer":"skins.simple.ItemRendererSkin",
+		"egret.gui.List":"skins.simple.ListSkin",
+		"egret.gui.Scroller":"skins.simple.ScrollerSkin",
+		"egret.gui.SkinnableContainer":"skins.simple.SkinnableContainerSkin",
+		"egret.gui.SkinnableDataContainer":"skins.simple.SkinnableDataContainerSkin",
+		"egret.gui.VScrollBar":"skins.simple.VScrollBarSkin"
 	}
 }

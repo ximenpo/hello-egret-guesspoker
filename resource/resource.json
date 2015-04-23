@@ -1,7 +1,7 @@
 {
 	"groups":[
 	{
-		"keys":"shuffle-cards,npc,poker-back",
+		"keys":"shuffle-cards,npc,poker-back,app_list_item_cutlline_png,app_list_item_select_png,app_list_item_up_png",
 		"name":"preload"
 	}],
 	"resources":[
@@ -26,5 +26,55 @@
 		"name":"bubble",
 		"type":"image",
 		"url":"assets/bubble.png"
+	},
+	{
+		"name":"hscrollbtn_png",
+		"type":"image",
+		"url":"assets/simple/HScrollBar/hscrollbtn.png"
+	},
+	{
+		"name":"hscrolltrack_png",
+		"type":"image",
+		"url":"assets/simple/HScrollBar/hscrolltrack.png"
+	},
+	{
+		"name":"app_list_item_cutlline_png",
+		"type":"image",
+		"url":"assets/simple/ItemRenderer/app_list_item_cutlline.png"
+	},
+	{
+		"name":"app_list_item_select_png",
+		"type":"image",
+		"url":"assets/simple/ItemRenderer/app_list_item_select.png"
+	},
+	{
+		"name":"app_list_item_up_png",
+		"type":"image",
+		"url":"assets/simple/ItemRenderer/app_list_item_up.png"
+	},
+	{
+		"name":"button_disabled_png",
+		"type":"image",
+		"url":"assets/simple/NormalButton/button_disabled.png"
+	},
+	{
+		"name":"button_down_png",
+		"type":"image",
+		"url":"assets/simple/NormalButton/button_down.png"
+	},
+	{
+		"name":"button_normal_png",
+		"type":"image",
+		"url":"assets/simple/NormalButton/button_normal.png"
+	},
+	{
+		"name":"vscrollbtn_png",
+		"type":"image",
+		"url":"assets/simple/VScrollBar/vscrollbtn.png"
+	},
+	{
+		"name":"vscrolltrack_png",
+		"type":"image",
+		"url":"assets/simple/VScrollBar/vscrolltrack.png"
 	}]
 }

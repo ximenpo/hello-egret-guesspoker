@@ -13,7 +13,7 @@
 	},
 	{
 		"name":"npc",
-		"subkeys":"0,1,2,3,4,5,6,7",
+		"subkeys":"npc0,npc1,npc2,npc3,npc4,npc5,npc6,npc7",
 		"type":"sheet",
 		"url":"assets/npc.json"
 	},

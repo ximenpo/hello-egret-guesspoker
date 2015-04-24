@@ -107,7 +107,7 @@
             return;
         }
 
-        ctrl.ctrlLogo.source =  "npc." + Math.ceil(Math.random() * 10000) % 8;
+        ctrl.ctrlLogo.source =  "npc.npc" + Math.ceil(Math.random() * 10000) % 8;
         ctrl.ctrlMessage.text = msg;
         ctrl.enabled = true;
         ctrl.visible = true;

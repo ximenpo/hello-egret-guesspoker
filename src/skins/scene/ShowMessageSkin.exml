@@ -6,10 +6,10 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:UIAsset id="ctrlLogo" height="200" width="164" x="0" y="219" source="0" visible.disabled="false"/>
+	<e:UIAsset id="ctrlLogo" height="200" width="164" x="0" y="219" visible.disabled="false"/>
 	<e:UIAsset id="uiasset1" source="bubble" x="97" width="344" height="196" y="103" visible.disabled="false"/>
 	<e:Label id="ctrlMessage" width="326" height="123" textAlign="center" verticalAlign="middle" x="103" y="121" visible.disabled="false" text="我想说..."/>
-	<e:List id="ctrlList" x="0" y="560" width="100%" height="120">
+	<e:List id="ctrlList" x="0" y="560" width="100%" height="120" visible.disabled="false">
 		<e:layout>
 			<e:HorizontalLayout/>
 		</e:layout>

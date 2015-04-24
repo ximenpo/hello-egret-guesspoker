@@ -57,6 +57,9 @@ egret_native.loadVersion = function (completeCall) {
         ctr.removeEventListener(egret.IOErrorEvent.IO_ERROR, loadError, this);
         ctr.removeEventListener(egret.Event.COMPLETE, loadComplete, this);
 
+        console.log("版本控制文件加载失败，请检查");
+        completeCall();
+
         console.log("Version control file loading failed. Please check");
         completeCall();
     }

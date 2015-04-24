@@ -21,11 +21,11 @@
 					<e:Move target="{ctrlLogo}" xFrom="-200" xTo="0" duration="500"/>
 					<e:Parallel target="{uiasset1}">
 						<e:Fade alphaFrom="0" alphaTo="0" duration="10"/>
-						<e:Fade alphaFrom="0" duration="500" startDelay="500" alphaTo="200"/>
+						<e:Fade alphaFrom="0" duration="500" startDelay="500" alphaTo="1"/>
 					</e:Parallel>
 					<e:Parallel target="{ctrlMessage}">
 						<e:Fade alphaFrom="0" alphaTo="0" duration="10"/>
-						<e:Fade alphaFrom="0" startDelay="800" alphaTo="235"/>
+						<e:Fade alphaFrom="0" startDelay="800" alphaTo="1"/>
 					</e:Parallel>
 				</e:Parallel>
 			</e:Transition>

@@ -5,3 +5,4 @@ bin-debug
 *.suo
 release
 /libs/*.ts
+*.user

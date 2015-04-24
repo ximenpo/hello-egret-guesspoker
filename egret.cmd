@@ -1,1 +1,0 @@
-"C:\Users\hejb\AppData\Roaming\npm\egret.cmd" %*

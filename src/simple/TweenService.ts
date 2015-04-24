@@ -1,4 +1,4 @@
-﻿module simple {
+module simple {
 
     class TweenService_ResumeAnimation {
         public constructor(private _tween: egret.Tween, private _target: egret.EventDispatcher, private _event: string) {

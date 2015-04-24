@@ -128,20 +128,21 @@
     }
 
     private _doInitCards() {
-        this._cardNumber    = Math.floor(Math.random() * 10000) % 14;
-        this._remainTimes   = 3;
+        this._cardNumber = Math.floor(Math.random() * 10000) % 14;
+        this._remainTimes = 3;
+        this._guiMessage.ctrlList.enabled = true;
         this._guiMessage.ctrlList.dataProvider = new egret.gui.ArrayCollection(this._cardsData);
     }
 
     private _doOnCardSelected(evt: egret.Event) {
         var ret = Number(this._guiMessage.ctrlList.selectedIndex) + 1 - this._cardNumber;
-        if(Math.abs(ret) < 0.1){
+        if (Math.abs(ret) < 0.1) {
             this._doGameEnd(true);
             return;
         }
 
         this._remainTimes--;
-        if(this._remainTimes < 1){
+        if (this._remainTimes < 1) {
             this._doGameEnd(false);
             return;
         }
@@ -151,34 +152,35 @@
     }
 
     private _restartScene: RestartScene;
-    private _doGameEnd(is_succeed: boolean){
-        egret.callLater(this._doShowMessage, this, [is_succeed?"恭喜你，答对啦～～":"没猜出来涅？再来一把呗～"]);
+    private _doGameEnd(is_succeed: boolean) {
+        this._guiMessage.ctrlList.enabled = false;
+        egret.callLater(this._doShowMessage, this, [is_succeed ? "恭喜你，答对啦～～" : "没猜出来涅？再来一把呗～"]);
 
         egret.callLater(this._doShowRestart, this);
     }
 
-    private _doShowRestart(){
-        if(null == this._restartScene){
+    private _doShowRestart() {
+        if (null == this._restartScene) {
             var scene = new RestartScene();
-            scene.enabled   = false;
-            scene.visible   = false;
+            scene.enabled = false;
+            scene.visible = false;
             scene.addEventListener(RestartScene.EVENT_TOUCHED, this._doRestartGame, this);
-            this.guiLayer.addElement(scene);
-            this._restartScene  = scene;
+            egret.gui.PopUpManager.addPopUp(scene, true);
+            this._restartScene = scene;
             egret.callLater(this._doShowRestart, this);
             return;
         }
 
-        this._restartScene.enabled  = true;
-        this._restartScene.visible  = true;
+        this._restartScene.enabled = true;
+        this._restartScene.visible = true;
     }
 
-    private _doRestartGame(evt: egret.TouchEvent){
-        this.guiLayer.removeElement(this._restartScene);
-        this._restartScene  = null;
+    private _doRestartGame(evt: egret.TouchEvent) {
+        egret.gui.PopUpManager.removePopUp(this._restartScene);
+        this._restartScene = null;
 
         this.gameLayer.removeChild(this._imgDealCard);
-        this._imgDealCard   = null;
+        this._imgDealCard = null;
 
         this._guiMessage.enabled = false;
         this._guiMessage.visible = false;

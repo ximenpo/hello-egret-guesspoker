@@ -419,9 +419,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bin-debug\src\manifest.json" />
-    <Content Include="build.bat" />
-    <Content Include="build_engine.bat" />
-    <Content Include="egretProperties.json" />
     <Content Include="libs\core\core.d.json" />
     <Content Include="libs\core\egret\context\html5.d.json" />
     <Content Include="libs\core\egret\context\native.d.json" />
@@ -429,7 +426,16 @@
     <Content Include="libs\core\extension\resource\res.d.json" />
     <Content Include="resource\resource.json" />
     <Content Include="resource\theme.thm" />
-    <Content Include="run.bat" />
+    <Content Include="src\skins\scene\RestartGameSkin.exml" />
+    <Content Include="src\skins\scene\ShowMessageSkin.exml" />
+    <Content Include="src\skins\simple\ButtonSkin.exml" />
+    <Content Include="src\skins\simple\HScrollBarSkin.exml" />
+    <Content Include="src\skins\simple\HScrollBarThumbSkin.exml" />
+    <Content Include="src\skins\simple\ItemRendererSkin.exml" />
+    <Content Include="src\skins\simple\ListSkin.exml" />
+    <Content Include="src\skins\simple\ScrollerSkin.exml" />
+    <Content Include="src\skins\simple\VScrollBarSkin.exml" />
+    <Content Include="src\skins\simple\VScrollBarThumbSkin.exml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -447,8 +453,8 @@
     <TypeScriptCompile Include="src\GameStage.ts" />
     <TypeScriptCompile Include="src\LoadingUI.ts" />
     <TypeScriptCompile Include="src\Main.ts" />
+    <TypeScriptCompile Include="src\scene\RestartScene.ts" />
     <TypeScriptCompile Include="src\scene\ShowMessageScene.ts" />
-    <TypeScriptCompile Include="src\scene\Showcase.ts" />
     <TypeScriptCompile Include="src\simple\BitmapFrame.ts" />
     <TypeScriptCompile Include="src\simple\GameStage.ts" />
     <TypeScriptCompile Include="src\simple\TweenService.ts" />

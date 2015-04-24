@@ -6,7 +6,7 @@
 		<e:State name="normal"/>
 		<e:State name="disabled"/>
 	</e:states>
-	<e:Button id="button1" width="280" height="89" label="再试一次" size="64" x="100" y="250"/>
+	<e:Button id="button1" width="280" height="89" label="再试一次" size="64" x="100" y="250" size.disabled="48"/>
 	<e:transitions>
 		<e:Array>
 			<e:Transition toState="normal" fromState="disabled">

@@ -1,7 +1,7 @@
 {
 	"groups":[
 	{
-		"keys":"shuffle-cards,poker-back,app_list_item_cutlline_png,app_list_item_select_png,app_list_item_up_png,npc",
+		"keys":"shuffle-cards,poker-back,app_list_item_cutlline_png,app_list_item_select_png,app_list_item_up_png",
 		"name":"preload"
 	}],
 	"resources":[

@@ -2,9 +2,6 @@
     private _pokerSprites: egret.SpriteSheet;
     private _pokerFramesData: simple.BitmapFramesData;
 
-    private _npcSprites: egret.SpriteSheet;
-    private _npcFramesData: simple.BitmapFramesData;
-
     private _cardsData: Array<any> = [];
 
     private _cardNumber: number;
@@ -28,18 +25,7 @@
             }
             this._pokerFramesData = data;
         }
-
-        this._npcSprites = RES.getRes("npc");
-        {
-            var data = new simple.BitmapFramesData();
-            data.fps = 10;
-            data.textures = new Array<egret.Texture>();
-            for (var i: number = 0; i < 8; ++i) {
-                data.textures.push(this._npcSprites.getTexture("" + i))
-            }
-            this._npcFramesData = data;
-        }
-
+        
         var cardsNumber = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
         for (var i: number = 0; i < cardsNumber.length; i++) {
             this._cardsData.push({ label: cardsNumber[i] });
@@ -121,7 +107,7 @@
             return;
         }
 
-        ctrl.ctrlLogo.source = this._npcFramesData.textures[Math.ceil(Math.random() * 10000) % this._npcFramesData.textures.length];
+        ctrl.ctrlLogo.source =  "npc." + Math.ceil(Math.random() * 10000) % 8;
         ctrl.ctrlMessage.text = msg;
         ctrl.enabled = true;
         ctrl.visible = true;

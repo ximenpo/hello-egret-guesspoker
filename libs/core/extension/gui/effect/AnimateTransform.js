@@ -196,6 +196,8 @@ var egret;
                 this.startDelay = tmpStartDelay;
                 this.motionPaths = tmpAnimProps;
                 transformInstance.duration = Math.max(this.duration, adjustedDuration);
+                if (egret.getQualifiedClassName(this) != egret.getQualifiedClassName(AnimateTransform))
+                    transformInstance.easer = AnimateTransform.linearEaser;
             };
             __egretProto__.getGlobalStartTime = function () {
                 var globalStartTime = 0;
@@ -260,6 +262,8 @@ var egret;
                     sharedObjectMap[target.hashCode] = effectInstance;
                 }
             };
+            /**子效果默认的缓动函数*/
+            AnimateTransform.linearEaser = new gui.Linear();
             //储存作用于同一个目标的转换效果共享的实例，
             AnimateTransform.sharedObjectMaps = {};
             AnimateTransform.sharedObjectRefcounts = {};

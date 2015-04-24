@@ -5856,6 +5856,8 @@ declare module egret.gui {
          */
         _addMotionPath(property: string, valueFrom?: number, valueTo?: number, valueBy?: number): void;
         _initInstance(instance: IEffectInstance): void;
+        /**子效果默认的缓动函数*/
+        private static linearEaser;
         private getGlobalStartTime();
         private static sharedObjectMaps;
         private static sharedObjectRefcounts;
